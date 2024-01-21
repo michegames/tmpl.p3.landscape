@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#rotate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  font-size: 2em;
+  background-color: black;
+}
+@media (orientation: landscape) {
+  #app {
+    visibility: visible;
+  }
+  #rotate {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  #app {
+    visibility: hidden;
+  }
+  #rotate {
+    display: flex;
+  }
+}
